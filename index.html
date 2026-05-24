@@ -12,9 +12,10 @@
         <nav>
             <a href="index.html" class="logo"><span>N</span>OVA</a>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" style="color: var(--accent);">Home</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -32,6 +33,71 @@
             </div>
         </div>
     </section>
+
+    <section class="map-section">
+        <div class="page-header" style="padding: 0 20px 20px; background: transparent;">
+            <h2>Explore The World Through My Lens</h2>
+            <p style="color: var(--text-muted);">Hover over a location and click to view the gallery.</p>
+        </div>
+
+        <div class="map-wrapper">
+            <div class="pin" style="top: 35%; left: 28%;" onclick="openLocation('newyork')">
+                <div class="pulse"></div>
+                <span>New York</span>
+            </div>
+            
+            <div class="pin" style="top: 30%; left: 48%;" onclick="openLocation('paris')">
+                <div class="pulse"></div>
+                <span>Paris</span>
+            </div>
+
+            <div class="pin" style="top: 38%; left: 82%;" onclick="openLocation('tokyo')">
+                <div class="pulse"></div>
+                <span>Tokyo</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="philosophy-banner">
+        <h2>"Photography is the story I fail to put into words."</h2>
+        <p style="font-weight: 500; letter-spacing: 1px;">- ALLEN ANTHONY</p>
+    </section>
+
+    <div id="image-modal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title">Location Name</h2>
+        <img id="modal-img" src="" alt="Location Photo" class="modal-content">
+    </div>
+
+    <script>
+        // A simple "database" of your map locations and their images
+        const locations = {
+            'newyork': { 
+                title: 'New York City, USA', 
+                img: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=1200&auto=format&fit=crop' 
+            },
+            'paris': { 
+                title: 'Paris, France', 
+                img: 'https://images.unsplash.com/photo-1502602898657-3e9076006e00?q=80&w=1200&auto=format&fit=crop' 
+            },
+            'tokyo': { 
+                title: 'Tokyo, Japan', 
+                img: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=1200&auto=format&fit=crop' 
+            }
+        };
+
+        // Function that runs when a map pin is clicked
+        function openLocation(loc) {
+            document.getElementById('modal-title').innerText = locations[loc].title;
+            document.getElementById('modal-img').src = locations[loc].img;
+            document.getElementById('image-modal').style.display = 'flex';
+        }
+
+        // Function that runs when the "X" is clicked
+        function closeModal() {
+            document.getElementById('image-modal').style.display = 'none';
+        }
+    </script>
 
 </body>
 </html>
