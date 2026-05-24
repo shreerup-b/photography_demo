@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=Inter:wght@400;500&display=swap');
 
+/* =========================================
+   1. GLOBAL VARIABLES & BASE STYLES
+========================================= */
 :root {
     --bg-dark: #0a0a0a;
     --bg-card: #151515;
@@ -21,9 +24,15 @@ html, body {
     overflow-x: hidden; 
 }
 
-h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; margin-top: 0; }
+h1, h2, h3 { 
+    font-family: var(--font-heading); 
+    font-weight: 700; 
+    margin-top: 0; 
+}
 
-/* --- Sleek Navigation --- */
+/* =========================================
+   2. NAVIGATION & HEADER
+========================================= */
 header {
     position: absolute;
     width: 100%;
@@ -41,27 +50,96 @@ nav {
     padding: 0 40px;
 }
 
-.logo { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 900; color: var(--text-light); text-decoration: none; letter-spacing: 1px; }
-.logo span { background-color: var(--accent); padding: 2px 8px; border-radius: 4px; margin-right: 5px; }
+.logo { 
+    font-family: var(--font-heading); 
+    font-size: 1.5rem; 
+    font-weight: 900; 
+    color: var(--text-light); 
+    text-decoration: none; 
+    letter-spacing: 1px; 
+}
 
-.nav-links { list-style: none; display: flex; gap: 40px; margin: 0; }
-.nav-links a { text-decoration: none; color: var(--text-light); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s; }
-.nav-links a:hover { color: var(--accent); }
+.logo span { 
+    background-color: var(--accent); 
+    padding: 2px 8px; 
+    border-radius: 4px; 
+    margin-right: 5px; 
+}
 
-/* --- Buttons --- */
+.nav-links { 
+    list-style: none; 
+    display: flex; 
+    gap: 40px; 
+    margin: 0; 
+}
+
+.nav-links a { 
+    text-decoration: none; 
+    color: var(--text-light); 
+    font-size: 0.85rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    transition: color 0.3s; 
+}
+
+.nav-links a:hover { 
+    color: var(--accent); 
+}
+
+/* =========================================
+   3. BUTTONS & SHARED LAYOUTS
+========================================= */
 .btn-group { display: flex; gap: 20px; }
-.btn { display: inline-block; padding: 15px 35px; border-radius: 30px; font-family: var(--font-heading); font-size: 0.9rem; font-weight: 700; text-decoration: none; transition: all 0.3s ease; }
-.btn-primary { background-color: var(--accent); color: white; }
-.btn-primary:hover { background-color: var(--accent-hover); transform: translateY(-3px); }
-.btn-outline { border: 2px solid white; color: white; }
-.btn-outline:hover { background-color: white; color: var(--bg-dark); transform: translateY(-3px); }
 
-/* --- Shared Layout Elements --- */
-.page-header { padding: 150px 20px 60px; text-align: center; background-color: var(--bg-card); }
+.btn { 
+    display: inline-block; 
+    padding: 15px 35px; 
+    border-radius: 30px; 
+    font-family: var(--font-heading); 
+    font-size: 0.9rem; 
+    font-weight: 700; 
+    text-decoration: none; 
+    transition: all 0.3s ease; 
+}
+
+.btn-primary { 
+    background-color: var(--accent); 
+    color: white; 
+}
+
+.btn-primary:hover { 
+    background-color: var(--accent-hover); 
+    transform: translateY(-3px); 
+}
+
+.btn-outline { 
+    border: 2px solid white; 
+    color: white; 
+}
+
+.btn-outline:hover { 
+    background-color: white; 
+    color: var(--bg-dark); 
+    transform: translateY(-3px); 
+}
+
+.page-header { 
+    padding: 150px 20px 60px; 
+    text-align: center; 
+    background-color: var(--bg-card); 
+}
+
 .page-header h1 { font-size: 3rem; }
-main { max-width: 1200px; margin: 60px auto; padding: 20px; }
 
-/* --- Hero Section & Animation (index.html) --- */
+main { 
+    max-width: 1200px; 
+    margin: 60px auto; 
+    padding: 20px; 
+}
+
+/* =========================================
+   4. HERO SECTION (index.html)
+========================================= */
 .hero {
     min-height: 100vh;
     background: linear-gradient(to right, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0.4) 100%), 
@@ -71,28 +149,56 @@ main { max-width: 1200px; margin: 60px auto; padding: 20px; }
     padding: 0 40px;
 }
 
-.hero-content { max-width: 1200px; margin: 0 auto; width: 100%; }
-.hero-subtitle { color: var(--accent); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 10px; }
-.hero h1 { font-size: 4.5rem; line-height: 1.1; margin-bottom: 20px; opacity: 0; animation: textReveal 1.2s cubic-bezier(0.2, 1, 0.3, 1) 0.3s forwards; }
-.hero p { color: var(--text-muted); max-width: 450px; margin-bottom: 40px; }
+.hero-content { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    width: 100%; 
+}
+
+.hero-subtitle { 
+    color: var(--accent); 
+    font-weight: 700; 
+    letter-spacing: 2px; 
+    text-transform: uppercase; 
+    font-size: 0.9rem; 
+    margin-bottom: 10px; 
+}
+
+.hero h1 { 
+    font-size: 4.5rem; 
+    line-height: 1.1; 
+    margin-bottom: 20px; 
+    opacity: 0; 
+    animation: textReveal 1.2s cubic-bezier(0.2, 1, 0.3, 1) 0.3s forwards; 
+}
+
+.hero p { 
+    color: var(--text-muted); 
+    max-width: 450px; 
+    margin-bottom: 40px; 
+}
 
 @keyframes textReveal {
     0% { opacity: 0; transform: translateY(40px) scale(0.95); }
     100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* --- Interactive Map Section (index.html) --- */
-.map-section { padding: 100px 20px; background-color: var(--bg-dark); }
-/* --- Global Map Container --- */
+/* =========================================
+   5. INTERACTIVE MAP & MODAL (index.html)
+========================================= */
+.map-section { 
+    padding: 100px 20px; 
+    background-color: var(--bg-dark); 
+}
+
 .map-wrapper { 
     position: relative; 
     max-width: 1000px; 
     height: 500px; 
-    margin: 40px auto; 
+    margin: 40px auto 100px; 
     border: 1px solid rgba(123, 97, 255, 0.2);
     border-radius: 12px;
     background-color: #050505;
-    /* Layer 1: The Purple Grid | Layer 2: The Map Image */
     background-image: 
         linear-gradient(rgba(123, 97, 255, 0.1) 1px, transparent 1px),
         linear-gradient(90deg, rgba(123, 97, 255, 0.1) 1px, transparent 1px),
@@ -100,47 +206,49 @@ main { max-width: 1200px; margin: 60px auto; padding: 20px; }
     background-size: 50px 50px, 50px 50px, contain;
     background-repeat: repeat, repeat, no-repeat;
     background-position: center;
-    margin-bottom: 100px;
 }
 
-/* Ensure the pins stay absolute relative to the map container */
-.pin {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    z-index: 10;
+/* Base pin container - NO INVERSION FILTERS HERE */
+.pin { 
+    position: absolute; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    cursor: pointer; 
+    z-index: 10; 
 }
 
-/* This adds the subtle grid lines back in */
-.map-overlay {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-image: 
-        linear-gradient(rgba(123, 97, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(123, 97, 255, 0.05) 1px, transparent 1px);
-    background-size: 50px 50px;
-    pointer-events: none;
+/* The actual colored dot */
+.pulse { 
+    width: 16px; 
+    height: 16px; 
+    background-color: var(--accent) !important; 
+    border-radius: 50%; 
+    box-shadow: 0 0 0 0 rgba(123, 97, 255, 0.7); 
+    animation: pulseAnim 2s infinite; 
 }
 
-/* Force the SVG inside to adopt the purple agency branding */
-.map-wrapper object {
-    width: 100%; 
-    height: 100%; 
-    pointer-events: none;
-    filter: invert(1); /* Inverts the black map to white */
+/* Hidden tooltip text that appears on hover */
+.pin span { 
+    margin-top: 10px; 
+    font-family: var(--font-heading); 
+    font-weight: 700; 
+    font-size: 0.9rem; 
+    color: white; 
+    letter-spacing: 1px; 
+    opacity: 0; 
+    transform: translateY(10px); 
+    transition: all 0.3s ease; 
+    background: var(--bg-card); 
+    padding: 4px 12px; 
+    border-radius: 20px; 
+    pointer-events: none; 
 }
 
-/* If the SVG is still stubborn, this overrides the inner fill colors */
-.map-wrapper svg path {
-    fill: #7b61ff !important;
-    opacity: 0.3 !important;
+.pin:hover span { 
+    opacity: 1; 
+    transform: translateY(0); 
 }
-.pin { position: absolute; display: flex; flex-direction: column; align-items: center; cursor: pointer; z-index: 10; filter: invert(1) contrast(200%); }
-.pulse { width: 16px; height: 16px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 0 0 rgba(123, 97, 255, 0.7); animation: pulseAnim 2s infinite; }
-.pin span { margin-top: 10px; font-family: var(--font-heading); font-weight: 700; font-size: 0.9rem; color: white; letter-spacing: 1px; opacity: 0; transform: translateY(10px); transition: all 0.3s ease; background: var(--bg-card); padding: 4px 12px; border-radius: 20px; pointer-events: none; }
-.pin:hover span { opacity: 1; transform: translateY(0); }
 
 @keyframes pulseAnim {
     0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(123, 97, 255, 0.7); }
@@ -148,50 +256,149 @@ main { max-width: 1200px; margin: 60px auto; padding: 20px; }
     100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(123, 97, 255, 0); }
 }
 
-.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.95); z-index: 999; justify-content: center; align-items: center; flex-direction: column; }
+/* Image Popup Modal */
+.modal { 
+    display: none; 
+    position: fixed; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    background-color: rgba(0, 0, 0, 0.95); 
+    z-index: 999; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+}
+
 .modal-content { 
     max-width: 90%; 
     max-height: 80vh; 
     border-radius: 8px; 
     object-fit: cover; 
-    /* The Animation */
     animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
+
+.modal h2 { 
+    color: white; 
+    margin-bottom: 20px; 
+    letter-spacing: 2px; 
+}
+
+.close-btn { 
+    position: absolute; 
+    top: 30px; right: 40px; 
+    color: white; 
+    font-size: 3rem; 
+    cursor: pointer; 
+    transition: color 0.3s; 
+}
+
+.close-btn:hover { color: var(--accent); }
 
 @keyframes popIn {
     0% { opacity: 0; transform: scale(0.8); }
     100% { opacity: 1; transform: scale(1); }
 }
-.modal h2 { color: white; margin-bottom: 20px; letter-spacing: 2px; }
-.close-btn { position: absolute; top: 30px; right: 40px; color: white; font-size: 3rem; cursor: pointer; transition: color 0.3s; }
-.close-btn:hover { color: var(--accent); }
 
-/* --- Philosophy Banner (index.html) --- */
-.philosophy-banner { background-color: var(--accent); padding: 80px 20px; text-align: center; color: white; }
-.philosophy-banner h2 { font-size: 2.5rem; max-width: 800px; margin: 0 auto 20px; line-height: 1.3; }
+/* =========================================
+   6. PHILOSOPHY BANNER
+========================================= */
+.philosophy-banner { 
+    background-color: var(--accent); 
+    padding: 80px 20px; 
+    text-align: center; 
+    color: white; 
+    margin-top: 50px;
+}
 
-/* --- Blog Section (blog.html) --- */
-.blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; }
-.blog-card { background-color: var(--bg-card); border-radius: 12px; overflow: hidden; transition: transform 0.3s ease; }
+.philosophy-banner h2 { 
+    font-size: 2.5rem; 
+    max-width: 800px; 
+    margin: 0 auto 20px; 
+    line-height: 1.3; 
+}
+
+/* =========================================
+   7. BLOG & ARTICLE STYLES
+========================================= */
+.blog-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+    gap: 30px; 
+}
+
+.blog-card { 
+    background-color: var(--bg-card); 
+    border-radius: 12px; 
+    overflow: hidden; 
+    transition: transform 0.3s ease; 
+}
+
 .blog-card:hover { transform: translateY(-10px); }
-.blog-img { width: 100%; height: 250px; object-fit: cover; }
+
+.blog-img { 
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
+}
+
 .blog-content { padding: 30px; }
-.blog-date { color: var(--accent); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; }
+
+.blog-date { 
+    color: var(--accent); 
+    font-size: 0.8rem; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    margin-bottom: 10px; 
+    display: block; 
+}
+
 .blog-content h3 { font-size: 1.4rem; margin-bottom: 15px; }
 .blog-content p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; }
-.read-more { color: white; text-decoration: none; font-weight: 700; border-bottom: 2px solid var(--accent); padding-bottom: 3px; }
 
-/* --- Article Page (article.html) --- */
-.article-container { max-width: 800px; margin: 0 auto; padding: 150px 20px 40px; } /* Includes the padding fix! */
+.read-more { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 700; 
+    border-bottom: 2px solid var(--accent); 
+    padding-bottom: 3px; 
+}
+
+.article-container { 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 150px 20px 40px; 
+}
+
 .article-header { text-align: center; margin-bottom: 40px; }
 .article-header h1 { font-size: 3rem; margin-bottom: 15px; }
-.article-meta { color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
-.article-hero-img { width: 100%; max-height: 500px; object-fit: cover; border-radius: 12px; margin-bottom: 40px; }
-.article-content p { font-size: 1.1rem; line-height: 1.8; color: #cccccc; margin-bottom: 25px; }
 
-/* --- Premium Infinite Marquee Portfolio --- */
+.article-meta { 
+    color: var(--accent); 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    font-size: 0.9rem; 
+    letter-spacing: 1px; 
+}
+
+.article-hero-img { 
+    width: 100%; 
+    max-height: 500px; 
+    object-fit: cover; 
+    border-radius: 12px; 
+    margin-bottom: 40px; 
+}
+
+.article-content p { 
+    font-size: 1.1rem; 
+    line-height: 1.8; 
+    color: #cccccc; 
+    margin-bottom: 25px; 
+}
+
+/* =========================================
+   8. PORTFOLIO MARQUEE (portfolio.html)
+========================================= */
 .portfolio-wrapper {
-    /* Fades the edges to black so images look like they emerge from shadows */
     -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     padding: 20px 0 80px;
@@ -206,24 +413,20 @@ main { max-width: 1200px; margin: 60px auto; padding: 20px; }
     overflow: hidden;
 }
 
-/* The track that moves */
 .marquee-track {
     display: flex;
     width: max-content;
     animation: scrollLeft 40s linear infinite;
 }
 
-/* Make even rows move right instead of left */
 .marquee-row:nth-child(even) .marquee-track {
     animation: scrollRight 40s linear infinite;
 }
 
-/* Pause the animation when hovered */
 .marquee-row:hover .marquee-track {
     animation-play-state: paused;
 }
 
-/* The container holding a set of images */
 .marquee-content {
     display: flex;
     gap: 20px;
@@ -242,7 +445,6 @@ main { max-width: 1200px; margin: 60px auto; padding: 20px; }
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Keeps them slightly moody until hovered */
     filter: brightness(0.7) grayscale(20%);
     transition: all 0.4s ease;
 }
@@ -252,7 +454,6 @@ main { max-width: 1200px; margin: 60px auto; padding: 20px; }
     transform: scale(1.05);
 }
 
-/* The infinite scrolling animations */
 @keyframes scrollLeft {
     to { transform: translateX(-50%); }
 }
@@ -262,7 +463,9 @@ main { max-width: 1200px; margin: 60px auto; padding: 20px; }
     to { transform: translateX(0); }
 }
 
-/* --- Premium Contact Form with Blurred Lined Background (contact.html) --- */
+/* =========================================
+   9. CONTACT FORM (contact.html)
+========================================= */
 .contact-page-wrapper {
     max-width: 100%; 
     margin: 0; 
@@ -316,6 +519,97 @@ main { max-width: 1200px; margin: 60px auto; padding: 20px; }
 
 .contact-form-card input:focus, 
 .contact-form-card textarea:focus, 
-.contact-form-card select:focus { border-color: var(--accent); background-color: rgba(0, 0, 0, 0.9); outline: none; box-shadow: 0 0 0 3px rgba(123, 97, 255, 0.2); }
-.contact-form-card label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: #cccccc; }
+.contact-form-card select:focus { 
+    border-color: var(--accent); 
+    background-color: rgba(0, 0, 0, 0.9); 
+    outline: none; 
+    box-shadow: 0 0 0 3px rgba(123, 97, 255, 0.2); 
+}
+
+.contact-form-card label { 
+    font-size: 0.85rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    color: #cccccc; 
+}
+
 .contact-form-card .form-group { margin-bottom: 25px; }
+
+/* =========================================
+   10. PRICING CARDS (pricing.html)
+========================================= */
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px; 
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    padding: 50px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 40px rgba(123, 97, 255, 0.15);
+}
+
+.card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: var(--text-light);
+}
+
+.card .price {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0 0 30px 0;
+    line-height: 1;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+.card li {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.card li:last-child {
+    border-bottom: none;
+}
+
+.card.popular {
+    border-color: var(--accent);
+    background: linear-gradient(180deg, #151515 0%, #1a1625 100%);
+}
+
+.popular-badge {
+    position: absolute;
+    top: 25px;
+    right: -40px;
+    background-color: var(--accent);
+    color: white;
+    padding: 8px 45px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    transform: rotate(45deg);
+    letter-spacing: 2px;
+}

@@ -40,14 +40,15 @@
             <p style="color: var(--text-muted);">Hover over a location and click to view the gallery.</p>
         </div>
 
-<div class="map-wrapper">
-    <div class="pin" style="top: 24%; left: 24%;" onclick="openLocation('newyork')"><div class="pulse"></div></div>
-    <div class="pin" style="top: 22%; left: 49%;" onclick="openLocation('paris')"><div class="pulse"></div></div>
-    <div class="pin" style="top: 27%; left: 83%;" onclick="openLocation('tokyo')"><div class="pulse"></div></div>
-    <div class="pin" style="top: 59%; left: 34%;" onclick="openLocation('rio')"><div class="pulse"></div></div>
-    <div class="pin" style="top: 70%; left: 52%;" onclick="openLocation('capetown')"><div class="pulse"></div></div>
-    <div class="pin" style="top: 71%; left: 86%;" onclick="openLocation('sydney')"><div class="pulse"></div></div>
-</div>
+        <div class="map-wrapper">
+    <div class="pin" style="top: 24%; left: 28%;" onclick="openLocation('newyork')"><div class="pulse"></div></div>
+    <div class="pin" style="top: 19%; left: 48%;" onclick="openLocation('paris')"><div class="pulse"></div></div>
+    <div class="pin" style="top: 26%; left: 81%;" onclick="openLocation('tokyo')"><div class="pulse"></div></div>
+    <div class="pin" style="top: 58%; left: 37%;" onclick="openLocation('rio')"><div class="pulse"></div></div>
+    <div class="pin" style="top: 68%; left: 52%;" onclick="openLocation('capetown')"><div class="pulse"></div></div>
+    <div class="pin" style="top: 68%; left: 84%;" onclick="openLocation('sydney')"><div class="pulse"></div></div>
+        </div>
+    </section>
 
     <section class="philosophy-banner">
         <h2>"Photography is the story I fail to put into words."</h2>
@@ -61,7 +62,6 @@
     </div>
 
     <script>
-        // A simple "database" of your map locations and their images
         const locations = {
             'newyork': { 
                 title: 'New York City, USA', 
@@ -89,14 +89,12 @@
             }
         };
 
-        // Function that runs when a map pin is clicked
         function openLocation(loc) {
             document.getElementById('modal-title').innerText = locations[loc].title;
             document.getElementById('modal-img').src = locations[loc].img;
             document.getElementById('image-modal').style.display = 'flex';
         }
 
-        // Function that runs when the "X" is clicked
         function closeModal() {
             document.getElementById('image-modal').style.display = 'none';
         }
