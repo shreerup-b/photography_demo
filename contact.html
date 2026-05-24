@@ -3,34 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Lens & Light</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Contact | Allen Anthony</title>
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        input, textarea, select {
+            width: 100%; padding: 15px; margin-top: 8px;
+            background-color: #111; border: 1px solid #333;
+            color: white; border-radius: 8px; font-family: var(--font-body);
+            box-sizing: border-box;
+        }
+        input:focus, textarea:focus, select:focus {
+            border-color: var(--accent); outline: none;
+        }
+        label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); }
+        .form-group { margin-bottom: 25px; }
+    </style>
 </head>
 <body>
 
-    <header>
+    <header style="background-color: var(--bg-card);">
         <nav>
-            <a href="index.html" class="logo">Lens & Light</a>
+            <a href="index.html" class="logo"><span>Z</span>OOMIN</a>
             <ul class="nav-links">
-                <li><a href="index.html">Portfolio</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <div class="page-header">
+        <h1>Let's Work Together</h1>
+        <p style="color: var(--text-muted);">Fill out the form below and I will get back to you within 24 hours.</p>
+    </div>
+
     <main>
-        <section class="contact-form">
-            <h1>Let's Create Together</h1>
+        <section style="max-width: 600px; margin: 0 auto; background-color: var(--bg-card); padding: 40px; border-radius: 12px;">
             <form action="#" method="POST">
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@email.com" required>
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
                     <label for="package">Interested Package</label>
@@ -42,9 +60,9 @@
                 </div>
                 <div class="form-group">
                     <label for="message">Tell me about your vision</label>
-                    <textarea id="message" name="message" rows="6" placeholder="Describe the project..."></textarea>
+                    <textarea id="message" name="message" rows="6"></textarea>
                 </div>
-                <button type="submit" class="btn">Send Inquiry</button>
+                <button type="submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer;">Send Inquiry</button>
             </form>
         </section>
     </main>
