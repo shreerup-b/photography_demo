@@ -40,23 +40,14 @@
             <p style="color: var(--text-muted);">Hover over a location and click to view the gallery.</p>
         </div>
 
-        <div class="map-wrapper">
-            <div class="pin" style="top: 35%; left: 28%;" onclick="openLocation('newyork')">
-                <div class="pulse"></div>
-                <span>New York</span>
-            </div>
-            
-            <div class="pin" style="top: 30%; left: 48%;" onclick="openLocation('paris')">
-                <div class="pulse"></div>
-                <span>Paris</span>
-            </div>
-
-            <div class="pin" style="top: 38%; left: 82%;" onclick="openLocation('tokyo')">
-                <div class="pulse"></div>
-                <span>Tokyo</span>
-            </div>
-        </div>
-    </section>
+<div class="map-wrapper">
+    <div class="pin" style="top: 24%; left: 24%;" onclick="openLocation('newyork')"><div class="pulse"></div></div>
+    <div class="pin" style="top: 22%; left: 49%;" onclick="openLocation('paris')"><div class="pulse"></div></div>
+    <div class="pin" style="top: 27%; left: 83%;" onclick="openLocation('tokyo')"><div class="pulse"></div></div>
+    <div class="pin" style="top: 59%; left: 34%;" onclick="openLocation('rio')"><div class="pulse"></div></div>
+    <div class="pin" style="top: 70%; left: 52%;" onclick="openLocation('capetown')"><div class="pulse"></div></div>
+    <div class="pin" style="top: 71%; left: 86%;" onclick="openLocation('sydney')"><div class="pulse"></div></div>
+</div>
 
     <section class="philosophy-banner">
         <h2>"Photography is the story I fail to put into words."</h2>
@@ -74,15 +65,27 @@
         const locations = {
             'newyork': { 
                 title: 'New York City, USA', 
-                img: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=1200&auto=format&fit=crop' 
+                img: 'https://images.pexels.com/photos/2190283/pexels-photo-2190283.jpeg?auto=compress&cs=tinysrgb&w=1200' 
             },
             'paris': { 
                 title: 'Paris, France', 
-                img: 'https://images.unsplash.com/photo-1502602898657-3e9076006e00?q=80&w=1200&auto=format&fit=crop' 
+                img: 'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop' 
             },
             'tokyo': { 
                 title: 'Tokyo, Japan', 
-                img: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=1200&auto=format&fit=crop' 
+                img: 'https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=1200' 
+            },
+            'rio': { 
+                title: 'Rio de Janeiro, Brazil', 
+                img: 'https://images.pexels.com/photos/351283/pexels-photo-351283.jpeg?auto=compress&cs=tinysrgb&w=1200' 
+            },
+            'capetown': { 
+                title: 'Cape Town, South Africa', 
+                img: 'https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=1200' 
+            },
+            'sydney': { 
+                title: 'Sydney, Australia', 
+                img: 'https://images.pexels.com/photos/2845013/pexels-photo-2845013.jpeg?auto=compress&cs=tinysrgb&w=1200' 
             }
         };
 
