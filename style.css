@@ -615,22 +615,55 @@ main {
 }
 
 /* =========================================
-   11. MOBILE RESPONSIVENESS
+   11. MOBILE RESPONSIVENESS (for phone views)
 ========================================= */
 @media (max-width: 768px) {
-    /* 1. Shrink the massive Hero text */
-    .hero h1 {
-        font-size: 2.5rem; /* Down from 4.5rem */
+
+    /* --- 1. Fix the cut-off Header Text --- */
+    .page-header {
+        padding: 100px 20px 40px; /* Reduced top padding to clear status bar */
     }
 
-    /* 2. Stack the buttons instead of side-by-side */
-    .btn-group {
-        flex-direction: column;
-        width: 100%;
+    .page-header h2 {
+        font-size: 1.8rem; /* Shrink the large title to fit on phones */
     }
 
-    /* 3. Hide the desktop links and show a hamburger menu */
-    .nav-links {
-        display: none;
+    /* --- 2. Fix the Map Collapse --- */
+    .map-wrapper {
+        height: 280px; /* Reduce fixed height to match a phone aspect ratio */
+        margin-bottom: 50px; /* Reduce empty space below the map */
+    }
+
+    /* --- 3. Re-Center the Pins specifically for Mobile --- */
+    /* We must recalculate coordinates for the new compressed height */
+
+    #pin-newyork {
+        top: 26%; /* Nudged North-East */
+        left: 25%;
+    }
+
+    #pin-paris {
+        top: 24%; /* Nudged North-East */
+        left: 52%;
+    }
+
+    #pin-tokyo {
+        top: 30%; /* Shifted West onto landmass */
+        left: 85%;
+    }
+
+    #pin-rio {
+        top: 55%; /* Pulled North/West from original ocean drift */
+        left: 36%;
+    }
+
+    #pin-capetown {
+        top: 65%; /* Pulled North and slightly West */
+        left: 53%;
+    }
+
+    #pin-sydney {
+        top: 66%; /* Shifted North and West onto landmass */
+        left: 86%;
     }
 }
